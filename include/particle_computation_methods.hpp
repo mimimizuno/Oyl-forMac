@@ -86,6 +86,47 @@ void setMazeBias(Grid2D<Element>& grid, const std::vector<std::vector<int>>& maz
     }
 }
 
+// 迷路に従って Vd を与える（direction 依存なし）
+// maze は (rows-2) x (cols-2) のサイズ（内側領域と1:1）
+template<typename Element>
+void setMazeBiasForEachParticle(Grid2D<Element>& grid, const std::vector<std::vector<int>>& maze, double Vd_normal, double Vd_wall = 0.0)
+{
+    const int rows = grid.numRows();
+    const int cols = grid.numCols();
+
+    // --- サイズ検証：maze は内側領域と同サイズ ---
+    if (maze.size() != static_cast<size_t>(rows - 2)) {
+        throw std::invalid_argument("Maze height must equal (grid rows - 2).");
+    }
+    for (const auto& row : maze) {
+        if (row.size() != static_cast<size_t>(cols - 2)) {
+            throw std::invalid_argument("Maze width must equal (grid cols - 2).");
+        }
+    }
+
+    // --- まず四辺は壁電圧 ---
+    for (int y = 0; y < rows; ++y) {
+        grid.getElement(y, 0)->setVias(Vd_wall);
+        grid.getElement(y, cols - 1)->setVias(Vd_wall);
+    }
+    for (int x = 0; x < cols; ++x) {
+        grid.getElement(0, x)->setVias(Vd_wall);
+        grid.getElement(rows - 1, x)->setVias(Vd_wall);
+    }
+
+    // --- 内側セルへ 1:1 で適用（1:通路 → Vd_normal, 0:壁 → Vd_wall）---
+    for (int y = 1; y < rows - 1; ++y) {
+        for (int x = 1; x < cols - 1; ++x) {
+            const int m = maze[y - 1][x - 1];
+            auto elem = grid.getElement(y, x);
+            // 0/1 以外が来ても 0 以外は通路扱いにしたいなら (m != 0) に変更
+            const bool isPassage = (m == 1);
+            elem->setVias(isPassage ? Vd_normal : Vd_wall);
+        }
+    }
+}
+
+
 // 与えられた迷路ベクトルの0（壁）1（通路)を読み取ってgridの要素にVdを設定。上下左右の方向を読み取り、障害物の１マス手前を低めの値で設定する関数
 // 衝突判定回路にバイアス電圧を設定する関数
 // 壁の1マス手前にVd_normal、2マス手前にVd_lowerを設定
@@ -96,11 +137,15 @@ void setMazeBiasWithDirection(
     const std::string& direction,
     double Vd_normal,
     double c = 2.0,
-    double cj_leg2 = Cj_leg2,
+    double cj_leg5 = Cj_leg5,
     double cj_leg3 = Cj_leg3,
-    double Vd_wall = 0.0
+    double Vd_wall = 0.0,
+    double ratio = 0.25
 ) {
-    double Vd_lower = Vd_normal - ((c * e) / ((3 * c + cj_leg3) * (2 * c + cj_leg2)));
+    double Vd_lower;
+    if(Vd_normal > 0) Vd_lower = Vd_normal - ratio * ((c * e) / ((leg5 * c + cj_leg5) * (leg3 * c + cj_leg3)));
+    else Vd_lower = Vd_normal + ratio * ((c * e) / ((leg5 * c + cj_leg5) * (leg3 * c + cj_leg3)));
+
     int rows = grid.numRows();
     int cols = grid.numCols();
 
@@ -198,5 +243,54 @@ void setMazeBiasWithDirection_multi(
     }
 }
 
+// 壁隣接マスにのみ電圧を印加。
+template<typename Element>
+void setMazeBiasDetec(
+    Grid2D<Element>& grid,
+    const std::vector<std::vector<int>>& maze,
+    const std::string& direction,   // "up" | "down" | "left" | "right"
+    double Vd_adjacent,             // 壁に隣接する通路セルへ与える電圧
+    double Vd_wall = 0.0            // それ以外（壁や非対象セル）の電圧
+) {
+    const int rows = grid.numRows();
+    const int cols = grid.numCols();
+
+    if (maze.empty() || maze.size() != static_cast<size_t>(rows - 2)
+        || maze[0].size() != static_cast<size_t>(cols - 2)) {
+        throw std::invalid_argument("Maze size must match grid size - 2.");
+    }
+
+    // まず全セルを壁電圧で初期化
+    for (int y = 0; y < rows; ++y)
+        for (int x = 0; x < cols; ++x)
+            grid.getElement(y, x)->setVias(Vd_wall);
+
+    // 通路セルのうち、指定方向に「壁(=0)」が隣接しているセルだけ Vd_adjacent を与える
+    for (int y = 1; y < rows - 1; ++y) {
+        for (int x = 1; x < cols - 1; ++x) {
+            const int my = y - 1; // maze 座標
+            const int mx = x - 1;
+
+            if (maze[my][mx] != 1) continue; // 通路のみ対象
+
+            bool adjacentToWall = false;
+            if (direction == "up") {
+                if (my > 0 && maze[my - 1][mx] == 0) adjacentToWall = true;
+            } else if (direction == "down") {
+                if (my + 1 < static_cast<int>(maze.size()) && maze[my + 1][mx] == 0) adjacentToWall = true;
+            } else if (direction == "left") {
+                if (mx > 0 && maze[my][mx - 1] == 0) adjacentToWall = true;
+            } else if (direction == "right") {
+                if (mx + 1 < static_cast<int>(maze[0].size()) && maze[my][mx + 1] == 0) adjacentToWall = true;
+            } else {
+                throw std::invalid_argument("direction must be one of: up, down, left, right");
+            }
+
+            if (adjacentToWall) {
+                grid.getElement(y, x)->setVias(Vd_adjacent);
+            }
+        }
+    }
+}
 
 #endif // PARTICLE_COMPUTATION_METHODS_HPP

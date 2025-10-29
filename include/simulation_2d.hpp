@@ -9,7 +9,6 @@
 #include <cmath>
 #include "seo_class.hpp"
 #include "grid_2dim.hpp"
-// #include "output_class.hpp"
 
 template <typename Element>
 class Simulation2D
@@ -28,11 +27,13 @@ private:
         >
         outputs;
     // トリガを表すベクトル（どのgridか、時刻、位置、値)
-    std::vector<std::tuple<Grid2D<Element>*,double, int, int, double>> voltageTriggers; // (grid, time, x, y, V)
+    std::vector<std::tuple<Grid2D<Element>*,double, int, int, double, double>> voltageTriggers; // (grid, time, x, y, V, applyTime(初期値1ns))
     // ファイル出力する素子をファイル名とともに格納するベクトル
     // std::vector<std::pair<std::ofstream*, std::shared_ptr<Element>>> selectedElements;
     // 複数素子を1つのファイルに出力するための構造
     std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selectedElements;
+    // dE出力対象
+    std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selecteddEElements;
     // トンネル情報を追跡する素子のベクトル
     std::vector<std::shared_ptr<Element>> trackedElements;
     // トンネルした素子を記録するための変数
@@ -76,7 +77,7 @@ public:
     const std::map<std::string, std::vector<std::vector<std::vector<double>>>> &getOutputs() const;
 
     // トリガーを追加する
-    void addVoltageTrigger(double triggerTime, Grid2D<Element>* grid, int y, int x, double voltage);
+    void addVoltageTrigger(double triggerTime, Grid2D<Element>* grid, int y, int x, double voltage, double applyTime = 1.0);
 
     // トリガを適用させる
     void applyVoltageTriggers();
@@ -84,8 +85,14 @@ public:
     // ファイル出力する素子とファイルを格納するベクトルに追加する
     void addSelectedElements(std::shared_ptr<std::ofstream> ofs, const std::vector<std::shared_ptr<Element>>& elems);
 
+    // ファイル出力する素子とファイルを格納するベクトルに追加する（dEの出力用）
+    void addSelecteddEElements(std::shared_ptr<std::ofstream> ofs, const std::vector<std::shared_ptr<Element>>& elems);
+
     // selectedElementsから該当する素子のVnを記録するファイル出力
     void outputSelectedElements();
+
+    // selectedElementsから該当する素子のdEを記録するファイル出力
+    void outputSelecteddE();
 
     // gnuplot用データ出力
     void generateGnuplotScript(const std::string& dataFilename, const std::vector<std::string>& labels);
@@ -159,6 +166,12 @@ void Simulation2D<Element>::addSelectedElements(std::shared_ptr<std::ofstream> o
 }
 
 template <typename Element>
+void Simulation2D<Element>::addSelecteddEElements(std::shared_ptr<std::ofstream> ofs, const std::vector<std::shared_ptr<Element>>& elems)
+{
+    selecteddEElements.emplace_back(ofs, elems);
+}
+
+template <typename Element>
 void Simulation2D<Element>::outputSelectedElements()
 {
     for (auto& [ofsPtr, elemPtrs] : selectedElements)
@@ -172,6 +185,26 @@ void Simulation2D<Element>::outputSelectedElements()
                 (*ofsPtr) << " " << elemPtr->getVn();
             else
                 (*ofsPtr) << " nan";  // nullポインタの場合の保険
+        }
+        (*ofsPtr) << std::endl;
+    }
+}
+
+template <typename Element>
+void Simulation2D<Element>::outputSelecteddE()
+{
+    for (auto& [ofsPtr, elemPtrs] : selecteddEElements)
+    {
+        if (!ofsPtr || !(*ofsPtr)) continue;  // ファイルが開けていない場合はスキップ
+
+        (*ofsPtr) << t;
+        for (const auto& elemPtr : elemPtrs)
+        {
+            if (elemPtr){
+                (*ofsPtr) << "," << elemPtr->getdE().at("up");
+                (*ofsPtr) << "," << elemPtr->getdE().at("down");
+            }
+            else (*ofsPtr) << ",nan,nan";  // nullポインタの場合の保険
         }
         (*ofsPtr) << std::endl;
     }
@@ -242,6 +275,7 @@ void Simulation2D<Element>::runStep()
     outputTooyl();
     // ファイル出力
     outputSelectedElements();
+    outputSelecteddE();
 
     // grid全体のVn計算(5回計算してならす)
     for (int i = 0; i < 5; i++)
@@ -260,7 +294,6 @@ void Simulation2D<Element>::runStep()
     // grid全体のdE計算
     for (auto &grid : grids)
     {    
-        // if(t > 150 && t < 151) cout << "t = " << t << " dE = " << grid.getElement(15,15)->getdE()["up"] << endl;
         grid.updateGriddE();
     }
 
@@ -316,15 +349,15 @@ const std::map<std::string, std::vector<std::vector<std::vector<double>>>> &Simu
 }
 
 template <typename Element>
-void Simulation2D<Element>::addVoltageTrigger(double triggerTime, Grid2D<Element>* grid, int y, int x, double voltage) {
-    voltageTriggers.emplace_back(grid, triggerTime, y, x, voltage);
+void Simulation2D<Element>::addVoltageTrigger(double triggerTime, Grid2D<Element>* grid, int y, int x, double voltage, double applyTime) {
+    voltageTriggers.emplace_back(grid, triggerTime, y, x, voltage, applyTime);
 }
 
 template <typename Element>
 void Simulation2D<Element>::applyVoltageTriggers()
 {
-    for (const auto& [gridPtr, triggerTime, y, x, voltage] : voltageTriggers) {
-        if (t >= triggerTime && t < triggerTime + dt * 10) {
+    for (const auto& [gridPtr, triggerTime, y, x, voltage, applyTime] : voltageTriggers) {
+        if (t >= triggerTime && t < triggerTime + applyTime) {
             if (!gridPtr) {
                 throw std::invalid_argument("Trigger references a null grid pointer.");
             }

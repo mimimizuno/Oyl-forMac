@@ -21,9 +21,9 @@ constexpr double Vd_seo = 0.0039;
 constexpr double Vd_oneway = 0.0039;
 constexpr double Vd_adjust = 0.0036;
 constexpr double R = 1;
-constexpr double R_detec = 0.5;
+constexpr double R_detec = 0.4;
 constexpr double R_small = 0.8;
-constexpr double Rj = 0.0005;
+constexpr double Rj = 0.0001;
 constexpr double C = 2.0;
 constexpr double C_detec = 1;
 constexpr double Cj_detec = 12;
@@ -36,7 +36,7 @@ double cj_leg3 = seo_junction_cj_calc(leg3, C, setVth);
 double cj_leg4 = seo_junction_cj_calc(leg4, C, setVth);
 double cj_leg5 = seo_junction_cj_calc(leg5, C, setVth);
 double cj_leg6 = seo_junction_cj_calc(leg6, C, setVth);
-constexpr int repeat_count = 100;
+constexpr int repeat_count = 10;
 constexpr int junction_num_max = 5;
 constexpr double max_pulse_voltage = 0;
 
@@ -160,11 +160,131 @@ int main()
                 }
             }
 
+            // // oneway回路 (oneway_command_down, oneway_CtoD_down, ...)
+            // for (int y = 0; y < oneway_command_downA.numRows(); ++y) {
+            //     for (int x = 0; x < oneway_command_downA.numCols(); ++x) {
+            //         {
+            //             // onway_command_downA(MultiSEO)
+            //             auto unit = std::make_shared<OnewayUnit6>();
+            //             std::array<std::shared_ptr<BaseElement>, 6> internal_seos;
+            //             for (int i = 0; i < 6; ++i) internal_seos[i] = std::make_shared<MultiSEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setOnewayMultiSeoParam(R, Rj, multi_cj_leg2, multi_cj_leg3, C, Vd_oneway, multi_num);
+            //             oneway_command_downA.setElement(y, x, unit);
+            //             if(x > 0 && x < command_downA.numCols() && y > 0 && y < command_downA.numRows() - 1){
+            //                 unit->setOnewayConnections(command_downA.getElement(y,x),command_downA.getElement(y+1,x));
+            //             }
+            //         }
+            //         {
+            //             // onway_command_downB(MultiSEO)
+            //             auto unit = std::make_shared<OnewayUnit6>();
+            //             std::array<std::shared_ptr<BaseElement>, 6> internal_seos;
+            //             for (int i = 0; i < 6; ++i) internal_seos[i] = std::make_shared<MultiSEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setOnewayMultiSeoParam(R, Rj, multi_cj_leg2, multi_cj_leg3, C, Vd_oneway, multi_num);
+            //             oneway_command_downB.setElement(y, x, unit);
+            //             if(x > 0 && x < command_downB.numCols() && y > 0 && y < command_downB.numRows() - 1){
+            //                 unit->setOnewayConnections(command_downB.getElement(y,x),command_downB.getElement(y+1,x));
+            //             }
+            //         }
+                    
+            //         {
+            //             // oneway_CtoD_downA(SEO)
+            //             auto unit = std::make_shared<OnewayUnit6and>("default","end");
+            //             std::array<std::shared_ptr<BaseElement>, 7> internal_seos;
+            //             for (int i = 0; i < 7; ++i) internal_seos[i] = std::make_shared<SEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setAdditionalElement_seo(R, Rj, cj_leg3, C, Vd_seo, leg3);
+            //             unit->setOnewaySeoParam(R, Rj, cj_leg2, cj_leg3, C, Vd_oneway);
+            //             oneway_CtoD_downA.setElement(y, x, unit);
+            //             if(x > 0 && x < command_downA.numCols() && y > 0 && y < command_downA.numRows()){
+            //                 unit->setOnewayConnections(
+            //                     {command_downA.getElement(y,x)},
+            //                     {detection_down.getElement(y,x),oneway_DtoC_downtoleftB.getElement(y,x)->getInternalElement(0)}
+            //                 );
+            //             }
+            //         }
+            //         {
+            //             // oneway_CtoD_downB(SEO)
+            //             auto unit = std::make_shared<OnewayUnit6and>("default","end");
+            //             std::array<std::shared_ptr<BaseElement>, 7> internal_seos;
+            //             for (int i = 0; i < 7; ++i) internal_seos[i] = std::make_shared<SEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setAdditionalElement_seo(R, Rj, cj_leg3, C, Vd_seo, leg3);
+            //             unit->setOnewaySeoParam(R, Rj, cj_leg2, cj_leg3, C, Vd_oneway);
+            //             oneway_CtoD_downB.setElement(y, x, unit);
+            //             if(x > 0 && x < command_downB.numCols() && y > 0 && y < command_downB.numRows()){
+            //                 unit->setOnewayConnections(
+            //                     {command_downB.getElement(y,x)},
+            //                     {detection_down.getElement(y,x),oneway_DtoC_downtoleftA.getElement(y,x)->getInternalElement(0)}
+            //                 );
+            //             }
+            //         }
+
+            //         {
+            //             // oneway_DtoC_downtoleftA(SEO)
+            //             auto unit = std::make_shared<OnewayUnit6and>("default","start");
+            //             std::array<std::shared_ptr<BaseElement>, 7> internal_seos;
+            //             for (int i = 0; i < 7; ++i) internal_seos[i] = std::make_shared<SEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setAdditionalElement_seo(R, Rj, cj_leg4, C, Vd_seo, leg4);
+            //             unit->setOnewaySeoParam(R, Rj, cj_leg2, cj_leg3, C, Vd_oneway);
+            //             oneway_DtoC_downtoleftA.setElement(y, x, unit);
+            //             if(x > 0 && x < command_leftA.numCols() && y > 0 && y < command_leftA.numRows()){
+            //                 unit->setOnewayConnections(
+            //                     {detection_down.getElement(y,x),oneway_CtoD_downB.getElement(y,x)->getInternalElement(6),oneway_DtoC_downtoleftB.getElement(y,x)->getInternalElement(0)},
+            //                     {command_leftA.getElement(y,x)}
+            //                 );
+            //             }
+            //         }
+            //         {
+            //             // oneway_DtoC_downtoleftB(SEO)
+            //             auto unit = std::make_shared<OnewayUnit6and>("default","start");
+            //             std::array<std::shared_ptr<BaseElement>, 7> internal_seos;
+            //             for (int i = 0; i < 7; ++i) internal_seos[i] = std::make_shared<SEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setAdditionalElement_seo(R, Rj, cj_leg4, C, Vd_seo, leg4);
+            //             unit->setOnewaySeoParam(R, Rj, cj_leg2, cj_leg3, C, Vd_oneway);
+            //             oneway_DtoC_downtoleftB.setElement(y, x, unit);
+            //             if(x > 0 && x < command_leftB.numCols() && y > 0 && y < command_leftB.numRows()){
+            //                 unit->setOnewayConnections(
+            //                     {detection_down.getElement(y,x),oneway_CtoD_downA.getElement(y,x)->getInternalElement(6),oneway_DtoC_downtoleftA.getElement(y,x)->getInternalElement(0)},
+            //                     {command_leftB.getElement(y,x)}
+            //                 );
+            //             }
+            //         }
+
+            //         {
+            //             // onway_command_leftA(MultiSEO)
+            //             auto unit = std::make_shared<OnewayUnit6>("reverse");
+            //             std::array<std::shared_ptr<BaseElement>, 6> internal_seos;
+            //             for (int i = 0; i < 6; ++i) internal_seos[i] = std::make_shared<MultiSEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setOnewayMultiSeoParam(R, Rj, multi_cj_leg2, multi_cj_leg3, C, Vd_oneway, multi_num);
+            //             oneway_command_leftA.setElement(y, x, unit);
+            //             if(x > 0 && x < command_leftA.numCols() && y > 0 && y < command_leftA.numRows() - 1){
+            //                 unit->setOnewayConnections(command_leftA.getElement(y,x),command_leftA.getElement(y+1,x));
+            //             }
+            //         }
+            //         {
+            //             // onway_command_leftB(MultiSEO)
+            //             auto unit = std::make_shared<OnewayUnit6>("reverse");
+            //             std::array<std::shared_ptr<BaseElement>, 6> internal_seos;
+            //             for (int i = 0; i < 6; ++i) internal_seos[i] = std::make_shared<MultiSEO>();
+            //             unit->setInternalElements(internal_seos);
+            //             unit->setOnewayMultiSeoParam(R, Rj, multi_cj_leg2, multi_cj_leg3, C, Vd_oneway, multi_num);
+            //             oneway_command_leftB.setElement(y, x, unit);
+            //             if(x > 0 && x < command_leftB.numCols() && y > 0 && y < command_leftB.numRows() - 1){
+            //                 unit->setOnewayConnections(command_leftB.getElement(y,x),command_leftB.getElement(y+1,x));
+            //             }
+            //         }
+            //     }
+            // }
             for (int y = 0; y < oneway_command_downA.numRows(); ++y) {
                 for (int x = 0; x < oneway_command_downA.numCols(); ++x) {
 
                     // --- (A) この (y,x) に関係する “全 oneway ユニット” を先に setElement だけする ---
-                    auto mk_6  = [] { std::array<std::shared_ptr<BaseElement>,6> a{}; for(int i=0;i<6;++i) a[i]=std::make_shared<SEO>(); return a; };
+                    auto mk_6  = [] { std::array<std::shared_ptr<BaseElement>,6> a{}; for(int i=0;i<6;++i) a[i]=std::make_shared<MultiSEO>(); return a; };
                     auto mk_7S = [] { std::array<std::shared_ptr<BaseElement>,7> a{}; for(int i=0;i<7;++i) a[i]=std::make_shared<SEO>();     return a; };
 
                     // 1) ↓命令A/B
@@ -205,10 +325,10 @@ int main()
 
                     // --- (B) ここから “同じ (y,x)” の中でパラメータ設定＆接続 ---
                     // パラメータ
-                    u_cmdDownA->setOnewaySeoParam(R,Rj,cj_leg2,cj_leg3,C,Vd_oneway);
-                    u_cmdDownB->setOnewaySeoParam(R,Rj,cj_leg2,cj_leg3,C,Vd_oneway);
-                    u_cmdLeftA->setOnewaySeoParam(R,Rj,cj_leg2,cj_leg3,C,Vd_oneway);
-                    u_cmdLeftB->setOnewaySeoParam(R,Rj,cj_leg2,cj_leg3,C,Vd_oneway);
+                    u_cmdDownA->setOnewayMultiSeoParam(R,Rj,multi_cj_leg2,multi_cj_leg3,C,Vd_oneway,multi_num);
+                    u_cmdDownB->setOnewayMultiSeoParam(R,Rj,multi_cj_leg2,multi_cj_leg3,C,Vd_oneway,multi_num);
+                    u_cmdLeftA->setOnewayMultiSeoParam(R,Rj,multi_cj_leg2,multi_cj_leg3,C,Vd_oneway,multi_num);
+                    u_cmdLeftB->setOnewayMultiSeoParam(R,Rj,multi_cj_leg2,multi_cj_leg3,C,Vd_oneway,multi_num);
 
                     u_c2dA->setAdditionalElement_seo(R,Rj,cj_leg3,C,Vd_seo,leg3);
                     u_c2dA->setOnewaySeoParam(R,Rj,cj_leg2,cj_leg3,C,Vd_oneway);
@@ -341,36 +461,36 @@ int main()
             });
 
             // === 特定素子の出力設定 ===
-            std::vector<std::shared_ptr<BaseElement>> tracked = {
-                command_downA.getElement(3,6), // oA1 A
-                command_downA.getElement(5,8), // oA2 B
-                command_downB.getElement(5,8), // oB3 C
-                command_downA.getElement(6,8), // oA4 D
-                command_downB.getElement(6,8), // oB5 E
-                command_downA.getElement(8,12), // oA6 F
-                command_downB.getElement(8,12), // oB7 G
-                command_downA.getElement(9,12), // oA8 H
-                command_downB.getElement(9,12), // oB9 I
+            // std::vector<std::shared_ptr<BaseElement>> tracked = {
+            //     command_downA.getElement(3,6), // oA1 A
+            //     command_downA.getElement(5,8), // oA2 B
+            //     command_downB.getElement(5,8), // oB3 C
+            //     command_downA.getElement(6,8), // oA4 D
+            //     command_downB.getElement(6,8), // oB5 E
+            //     command_downA.getElement(8,12), // oA6 F
+            //     command_downB.getElement(8,12), // oB7 G
+            //     command_downA.getElement(9,12), // oA8 H
+            //     command_downB.getElement(9,12), // oB9 I
 
-                detection_down.getElement(2,6), // xAB10 J
-                detection_down.getElement(3,6), // oA11 K
-                detection_down.getElement(5,8), // oAB12 L
-                detection_down.getElement(6,8), // oA13 M
-                detection_down.getElement(8,12), // oAB14 N
-                detection_down.getElement(9,12), // oB15 O
+            //     detection_down.getElement(2,6), // xAB10 J
+            //     detection_down.getElement(3,6), // oA11 K
+            //     detection_down.getElement(5,8), // oAB12 L
+            //     detection_down.getElement(6,8), // oA13 M
+            //     detection_down.getElement(8,12), // oAB14 N
+            //     detection_down.getElement(9,12), // oB15 O
 
-                command_leftA.getElement(3,6), // oA16 P
-                command_leftB.getElement(3,6), // xB17 Q
-                command_leftA.getElement(5,8), // xA18 R
-                command_leftB.getElement(5,8), // oB19 S
-                command_leftA.getElement(6,8), // oA20 T
-                command_leftB.getElement(6,8), // xB21 U
-                command_leftA.getElement(8,12), // oA22 V
-                command_leftB.getElement(8,12), // xB23 W
-                command_leftA.getElement(9,12), // xA24 X
-                command_leftB.getElement(9,12), // oB25 Y
-            };
-            sim.addTrackedElements(tracked);
+            //     command_leftA.getElement(3,6), // oA16 P
+            //     command_leftB.getElement(3,6), // xB17 Q
+            //     command_leftA.getElement(5,8), // xA18 R
+            //     command_leftB.getElement(5,8), // oB19 S
+            //     command_leftA.getElement(6,8), // oA20 T
+            //     command_leftB.getElement(6,8), // xB21 U
+            //     command_leftA.getElement(8,12), // oA22 V
+            //     command_leftB.getElement(8,12), // xB23 W
+            //     command_leftA.getElement(9,12), // xA24 X
+            //     command_leftB.getElement(9,12), // oB25 Y
+            // };
+            // sim.addTrackedElements(tracked);
 
             // === トリガ設定 ===
             sim.addVoltageTrigger(100, &command_downA, 1, 6, 0.002);//A
@@ -469,29 +589,29 @@ int main()
             sim.run();
             allResults.push_back(sim.getTunnelTimes());
             // 動画出力
-            // const auto &outputs = sim.getOutputs();
-            // for (const auto &[label, data] : outputs)
-            // {
-            //     auto normalized = oyl::normalizeto255(data);
-            //     oyl::VideoClass video(normalized);
-            //     video.set_filename("output/" + label + std::to_string(trial) +  ".mp4");
-            //     video.set_codec(cv::VideoWriter::fourcc('m', 'p', '4', 'v'));
-            //     video.set_fps(30.0);
-            //     video.makevideo();
-            // }
+            const auto &outputs = sim.getOutputs();
+            for (const auto &[label, data] : outputs)
+            {
+                auto normalized = oyl::normalizeto255(data);
+                oyl::VideoClass video(normalized);
+                video.set_filename("output/" + label + std::to_string(trial) +  ".mp4");
+                video.set_codec(cv::VideoWriter::fourcc('m', 'p', '4', 'v'));
+                video.set_fps(30.0);
+                video.makevideo();
+            }
 
         }
 
         // // === CSV出力 ===
-        std::string filename = "output/single100.csv";
-        std::ofstream ofs(filename);
-        for (const auto& row : allResults) {
-            for (size_t i = 0; i < row.size(); ++i) {
-                ofs << row[i];
-                if (i != row.size() - 1) ofs << ",";
-            }
-            ofs << "\n";
-        }
+        // std::string filename = "output/onlyB_new.csv";
+        // std::ofstream ofs(filename);
+        // for (const auto& row : allResults) {
+        //     for (size_t i = 0; i < row.size(); ++i) {
+        //         ofs << row[i];
+        //         if (i != row.size() - 1) ofs << ",";
+        //     }
+        //     ofs << "\n";
+        // }
 
         
     }

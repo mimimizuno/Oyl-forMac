@@ -10,6 +10,7 @@
 // BaseElementではメソッドのインターフェースのみを実装しており、実際の処理内容は持たない
 // 派生クラス(SEO, multiSEOなど)が必ずオーバーライドして具体的な処理を書く必要がある
 // =0で定義しているのは、関数の中身を持っていないことを示し子クラスで実装する設計指示をC++に与えるため
+// 本クラスで定義していないメソッドはsimulationクラスやgridクラスで使用することはできない
 //---------------------------------------------------------------------------------------------------
 
 class BaseElement {
@@ -23,6 +24,7 @@ public:
     virtual std::map<std::string, double> getWT() const = 0;
     // oneway用の中要素を取り出すメソッド（seoやmultiseoで呼び出すとエラーが発生する）
     virtual std::shared_ptr<BaseElement> getInternalElement(int index) const = 0;
+    virtual std::map<std::string, double> getdE() const = 0;
 
     // --- 状態設定 ---
     virtual void setVias(const double Vd) = 0;

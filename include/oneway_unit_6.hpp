@@ -1,5 +1,5 @@
-#ifndef ONEWAY_UNIT_HPP
-#define ONEWAY_UNIT_HPP
+#ifndef ONEWAY_UNIT6_HPP
+#define ONEWAY_UNIT6_HPP
 
 #include "constants.hpp"
 #include "base_element.hpp"
@@ -14,17 +14,17 @@
 #include <stdexcept>
 
 // 一方向伝導素子を表すクラス（BaseElementに対応）
-class OnewayUnit : public BaseElement
+class OnewayUnit6 : public BaseElement
 {
 private:
-    std::array<std::shared_ptr<BaseElement>, 4> ows;   // 一方通行のための4つの素子を用意
+    std::array<std::shared_ptr<BaseElement>, 6> ows;   // 一方通行のための4つの素子を用意
     std::string oneway_direction;                      // 一方通行の方向("left"3から0の方向,"right"0から3の方向)
     std::shared_ptr<BaseElement> locate = nullptr;     // 最小wtを持つ素子
     std::string tunnel_direction = "none";             // トンネルの方向を保持
 
 public:
     // コンストラクタ：一方通行の向きと4つの素子を初期化（デフォルトは0から3。3から0にしたい場合は引数にreverseを指定）
-    OnewayUnit(std::string onewaydirection = "default") : oneway_direction(onewaydirection)
+    OnewayUnit6(std::string onewaydirection = "default") : oneway_direction(onewaydirection)
     {
         if (onewaydirection != "default" && onewaydirection != "reverse")
         {
@@ -43,7 +43,7 @@ public:
     }
 
     // 一方通行の内部素子を手動設定（SEOやMultiSEOを入れる）
-    void setInternalElements(const std::array<std::shared_ptr<BaseElement>, 4> &elements)
+    void setInternalElements(const std::array<std::shared_ptr<BaseElement>, 6> &elements)
     {
         ows = elements;
     }
@@ -51,69 +51,79 @@ public:
     // 一方通行の中身の素子(seo)にパラメータを付与(R,Rj,Cj_leg2,Cj_leg3,C,Vd)
     void setOnewaySeoParam(double r, double rj, double cj_leg2, double cj_leg3, double c, double vd, double ratio = 1.0)
     {
-        double vias = -vd + ratio * ((c * e) / ((3 * c + cj_leg3) * (2 * c + cj_leg2)));
-        for (int i = 0; i < 4; i++)
+        double vias = vd - ratio * ((c * e) / ((3 * c + cj_leg3) * (2 * c + cj_leg2)));
+        for (int i = 0; i < 6; i++)
         {
             auto ptr = std::dynamic_pointer_cast<SEO>(ows[i]);
-            if (i == 0 || i == 3)
+            if (i == 1 || i == 4)
             {
-                ptr->setUp(r, rj, cj_leg3, c, -vd, 3);
+                ptr->setUp(r, rj, cj_leg3, c, vd, 3);
             }
             else
             {
-                ptr->setUp(r, rj, cj_leg2, c, vd, 2);
+                ptr->setUp(r, rj, cj_leg2, c, -vd, 2);
             }
         }
         if (oneway_direction == "default")
-            std::dynamic_pointer_cast<SEO>(ows[3])->setVias(vias);
+            std::dynamic_pointer_cast<SEO>(ows[4])->setVias(vias);
         else
-            std::dynamic_pointer_cast<SEO>(ows[0])->setVias(vias);
+            std::dynamic_pointer_cast<SEO>(ows[1])->setVias(vias);
     }
 
     // 一方通行の中身の素子(multiseo)にパラメータを付与(R,Rj,Cj_leg2,Cj_leg3,C,Vd,multi_num)
     void setOnewayMultiSeoParam(double r, double rj, double cj_leg2, double cj_leg3, double c, double vd, int junction_num, double ratio = 0.8)
     {
         // ratio * ((e * multi_num * multi_num * Cs) / ((myleg * multi_num * Cs + myCjs) * (myleg * multi_num * Cs + yourCjs)));
-        double vias = -vd + ratio * ((c * junction_num * junction_num * e) / ((leg3 * junction_num * c + cj_leg3) * (leg3 * junction_num * c + cj_leg2)));
-        for (int i = 0; i < 4; i++)
+        double vias = vd - ratio * ((c * junction_num * junction_num * e) / ((leg3 * junction_num * c + cj_leg3) * (leg3 * junction_num * c + cj_leg2)));
+        for (int i = 0; i < 6; i++)
         {
             auto ptr = std::dynamic_pointer_cast<MultiSEO>(ows[i]);
-            if (i == 0 || i == 3)
+            if (i == 1 || i == 4)
             {
-                ptr->setUp(r, rj, cj_leg3, c, -vd, 3, junction_num);
+                ptr->setUp(r, rj, cj_leg3, c, vd, 3, junction_num);
             }
             else
             {
-                ptr->setUp(r, rj, cj_leg2, c, vd, 2, junction_num);
+                ptr->setUp(r, rj, cj_leg2, c, -vd, 2, junction_num);
             }
         }
         if (oneway_direction == "default")
-            std::dynamic_pointer_cast<MultiSEO>(ows[3])->setVias(vias);
+            std::dynamic_pointer_cast<MultiSEO>(ows[4])->setVias(vias);
         else
-            std::dynamic_pointer_cast<MultiSEO>(ows[0])->setVias(vias);
+            std::dynamic_pointer_cast<MultiSEO>(ows[1])->setVias(vias);
     }
     // 両端の素子を含むconnectionの設定
     void setOnewayConnections(std::shared_ptr<BaseElement> left_elem, std::shared_ptr<BaseElement> right_elem)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 6; i++)
         {
             std::vector<std::shared_ptr<BaseElement>> connections;
             if (i == 0)
             {
                 connections.push_back(left_elem);
                 connections.push_back(ows[1]);
-                connections.push_back(ows[2]);
             }
-            else if (i == 1 || i == 2)
+            else if (i == 1)
             {
                 connections.push_back(ows[0]);
+                connections.push_back(ows[2]);
                 connections.push_back(ows[3]);
             }
-            else
+            else if (i == 2 || i == 3)
+            {
+                connections.push_back(ows[1]);
+                connections.push_back(ows[4]);
+            }
+            else if (i == 4)
+            {
+                connections.push_back(ows[2]);
+                connections.push_back(ows[3]);
+                connections.push_back(ows[5]);
+            }
+            else if (i == 5)
             {
                 connections.push_back(right_elem);
-                connections.push_back(ows[1]);
-                connections.push_back(ows[2]);
+                connections.push_back(ows[4]);
             }
             ows[i]->setConnections(connections);
         }
@@ -206,7 +216,7 @@ public:
     }
 
     // 内部の素子群を取得（デバッグや出力用）
-    const std::array<std::shared_ptr<BaseElement>, 4> &getInternalElements() const
+    const std::array<std::shared_ptr<BaseElement>, 6> &getInternalElements() const
     {
         return ows;
     }
@@ -238,7 +248,7 @@ public:
 
     // indexを引数にして内部の要素を取り出す関数
     std::shared_ptr<BaseElement> getInternalElement(int index) const override {
-        if (index < 0 || index >= 4) {
+        if (index < 0 || index >= 6) {
             throw std::out_of_range("Internal element index out of range.");
         }
         return ows[index];
@@ -246,4 +256,4 @@ public:
 
 };
 
-#endif // ONEWAY_UNIT_HPP
+#endif // ONEWAY_UNIT6_HPP

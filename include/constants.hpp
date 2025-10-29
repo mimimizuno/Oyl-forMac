@@ -25,7 +25,7 @@ constexpr double multi_Cj = 390; // 20重振動子のトンネル容量[aF]
 
 // 閾値電圧に合わせて、足の数、接合容量から振動子のCjの値を返す関数
 inline int seo_junction_cj_calc(int leg, double C, double Vth){
-    return static_cast<int>(e / (2 * Vth)) - leg * C;
+    return static_cast<int>((e / (2 * Vth)) - leg * C);
 }
 
 // 閾値電圧に合わせて、多重数、足の数、接合容量から多重振動子のCjの値を返す関数(sample参照)

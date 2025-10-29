@@ -73,7 +73,7 @@ public:
     double getSurroundingVsum() const override;
 
     // dEの取得
-    std::map<std::string, double> getdE() const;
+    std::map<std::string, double> getdE() const override;
 
     // Qの取得
     double getQ() const;
