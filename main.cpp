@@ -615,9 +615,9 @@ int main()
 
             // detec
             setMazeBiasWithDirection(detection_down,maze,"down",-Vd_detec);
-            setMazeBiasWithDirection(detection_left,maze,"left",-Vd_detec);
-            setMazeBiasWithDirection(detection_up,maze,"up",-Vd_detec);
-            setMazeBiasWithDirection(detection_right,maze,"right",-Vd_detec);
+            setMazeBiasWithDirection(detection_left,maze,"left",-0);
+            setMazeBiasWithDirection(detection_up,maze,"up",-0);
+            setMazeBiasWithDirection(detection_right,maze,"right",-0);
 
             // === シミュレーション初期化 ===
             Sim sim(dt, endtime);
