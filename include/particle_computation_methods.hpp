@@ -243,7 +243,6 @@ void setMazeBiasWithDirection_multi(
     }
 }
 
-<<<<<<< HEAD
 // 壁隣接マスにのみ電圧を印加。
 template<typename Element>
 void setMazeBiasDetec(
@@ -293,7 +292,5 @@ void setMazeBiasDetec(
         }
     }
 }
-=======
->>>>>>> dc1c858 (Update parallel and tunnel logs)
 
 #endif // PARTICLE_COMPUTATION_METHODS_HPP
