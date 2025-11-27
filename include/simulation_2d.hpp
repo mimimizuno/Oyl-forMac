@@ -34,6 +34,8 @@ private:
     std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selectedElements;
     // dE出力対象
     std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selecteddEElements;
+    // 全データ出力対象
+    std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selectedAllDataElements;
     // トンネル情報を追跡する素子のベクトル
     std::vector<std::shared_ptr<Element>> trackedElements;
     // トンネルした素子を記録するための変数
@@ -88,11 +90,17 @@ public:
     // ファイル出力する素子とファイルを格納するベクトルに追加する（dEの出力用）
     void addSelecteddEElements(std::shared_ptr<std::ofstream> ofs, const std::vector<std::shared_ptr<Element>>& elems);
 
+    // ファイル出力する素子とファイルを格納するベクトルに追加する（素子全データ出力用）
+    void addSelectedAllDataElements(std::shared_ptr<std::ofstream> ofs, const std::vector<std::shared_ptr<Element>>& elems);
+
     // selectedElementsから該当する素子のVnを記録するファイル出力
     void outputSelectedElements();
 
     // selectedElementsから該当する素子のdEを記録するファイル出力
     void outputSelecteddE();
+
+    // selectedElementsから該当する素子の全データを記録するファイル出力
+    void outputSelectedAllData();
 
     // gnuplot用データ出力
     void generateGnuplotScript(const std::string& dataFilename, const std::vector<std::string>& labels);
@@ -172,6 +180,12 @@ void Simulation2D<Element>::addSelecteddEElements(std::shared_ptr<std::ofstream>
 }
 
 template <typename Element>
+void Simulation2D<Element>::addSelectedAllDataElements(std::shared_ptr<std::ofstream> ofs, const std::vector<std::shared_ptr<Element>>& elems)
+{
+    selectedAllDataElements.emplace_back(ofs, elems);
+}
+
+template <typename Element>
 void Simulation2D<Element>::outputSelectedElements()
 {
     for (auto& [ofsPtr, elemPtrs] : selectedElements)
@@ -207,6 +221,76 @@ void Simulation2D<Element>::outputSelecteddE()
             else (*ofsPtr) << ",nan,nan";  // nullポインタの場合の保険
         }
         (*ofsPtr) << std::endl;
+    }
+}
+
+template <typename Element>
+void Simulation2D<Element>::outputSelectedAllData()
+{
+    for (auto& [ofsPtr, elemPtrs] : selecteddEElements)
+    {
+        if (!ofsPtr || !(*ofsPtr)) continue;
+
+        // --- 最初の1回だけヘッダーを書く ---
+        if (ofsPtr->tellp() == 0)
+        {
+            (*ofsPtr)
+                << "t"
+                << ",Q"
+                << ",Vn"
+                << ",Vd"
+                << ",R"
+                << ",Rj"
+                << ",Cj"
+                << ",C"
+                << ",legs"
+                << ",V_sum"
+                << ",dE_up"
+                << ",dE_down"
+                << ",wt_up"
+                << ",wt_down"
+                << "\n";
+        }
+
+        (*ofsPtr) << t;
+
+        const auto& elemPtr = elemPtrs[0];
+
+        if (!elemPtr)
+        {
+            // null の場合は全項目 nan
+            (*ofsPtr) << ",nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan\n";
+            continue;
+        }
+
+        // --- 基本パラメータ ---
+        (*ofsPtr)
+            << "," << elemPtr->getQ()
+            << "," << elemPtr->getVn()
+            << "," << elemPtr->getVd()
+            << "," << elemPtr->getR()
+            << "," << elemPtr->getRj()
+            << "," << elemPtr->getCj()
+            << "," << elemPtr->getC()
+            << "," << elemPtr->getlegs()
+            << "," << elemPtr->getSurroundingVsum();
+
+        // --- dE(up/down) ---
+        double dE_up   = elemPtr->getdE().count("up")   ? elemPtr->getdE().at("up")   : NAN;
+        double dE_down = elemPtr->getdE().count("down") ? elemPtr->getdE().at("down") : NAN;
+
+        (*ofsPtr)
+            << "," << dE_up
+            << "," << dE_down;
+
+        // --- wt(up/down) ---
+        double wt_up   = elemPtr->getwt().count("up")   ? elemPtr->getwt().at("up")   : NAN;
+        double wt_down = elemPtr->getwt().count("down") ? elemPtr->getwt().at("down") : NAN;
+
+        (*ofsPtr)
+            << "," << wt_up
+            << "," << wt_down
+            << "\n";
     }
 }
 
@@ -276,6 +360,7 @@ void Simulation2D<Element>::runStep()
     // ファイル出力
     outputSelectedElements();
     outputSelecteddE();
+    outputSelectedAllData();
 
     // grid全体のVn計算(5回計算してならす)
     for (int i = 0; i < 5; i++)

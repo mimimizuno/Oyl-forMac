@@ -28,7 +28,7 @@ constexpr double C = 2;
 constexpr double C_detec = 1;
 constexpr double Cj_detec = 12;
 constexpr double dt = 0.1;
-constexpr double endtime = 300;
+constexpr double endtime = 100;
 constexpr double setVth = 0.004;
 
 double cj_leg2 = seo_junction_cj_calc(leg2, C, setVth);
@@ -691,6 +691,10 @@ int main()
                 command_leftA.getElement(4,10),
                 command_leftB.getElement(4,10),
             };
+
+            std::vector<std::shared_ptr<BaseElement>> trackDetec = {
+                detection_down.getElement(4,8), // xAB10 J
+            };
             // std::vector<std::shared_ptr<BaseElement>> tracked_detec = {
             //     detection_down.getElement(2,6), // xAB10 J
             //     detection_down.getElement(3,6), // oA11 K
@@ -755,7 +759,10 @@ int main()
             // dE追跡用
             // auto ofsdE = std::make_shared<std::ofstream>("output/dEcheccker.csv");
             // sim.addSelecteddEElements(ofsdE, {oneway_DtoC_downtoleftA.getElement(6,8)->getInternalElement(0),oneway_DtoC_downtoleftB.getElement(6,8)->getInternalElement(0)});
-            // // 時刻記録
+            // 素子データ全追跡
+            auto ofsAllData = std::make_shared<std::ofstream>("output/detecDown4-8All.csv");
+            sim.addSelectedAllDataElements(ofsAllData,trackDetec);
+            // 時刻記録
             sim.run();
             allResults.push_back(sim.getTunnelTimes());
             // 動画出力

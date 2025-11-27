@@ -81,36 +81,35 @@ public:
     // dEの取得
     std::map<std::string, double> getdE() const override;
 
-    // Qの取得
-    double getQ() const;
-
     // wtの取得
     std::map<std::string, double> getWT() const override;
+
+    // Qの取得
+    double getQ() const override;
+
+    // Rゲッター
+    double getR() const override;
+    
+    // Rjゲッター
+    double getRj() const override;
+    
+    // Cjゲッター
+    double getCj() const override;
+    
+    // Cゲッター
+    double getC() const override;
+
+    // Vdゲッター
+    double getVd() const override;
+    
+    // legsゲッター
+    int getlegs() const override;
 
     // oneway用の関数のため呼び出すとエラー発生
     std::shared_ptr<BaseElement> getInternalElement(int index) const override;
     //-------- 汎用処理 -------------//
     // 0から1の間の乱数を生成
     double Random();
-
-    //-------- テスト用 -------------//
-    // テスト用Rゲッター
-    double getR() const;
-    
-    // テスト用Rjゲッター
-    double getRj() const;
-    
-    // テスト用Cjゲッター
-    double getCj() const;
-    
-    // テスト用Cゲッター
-    double getC() const;
-
-    // Vdゲッター
-    double getVd() const override;
-    
-    // テスト用legsゲッター
-    int getlegs() const;
 
     // テスト用dEセッター
     void setdE(const std::string& direction, double value);
