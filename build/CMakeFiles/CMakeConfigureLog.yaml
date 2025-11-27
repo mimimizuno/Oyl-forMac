@@ -1,0 +1,2805 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/postgresql@16/bin/uname"
+      - "/Users/mimimizuno/.rbenv/shims/uname"
+      - "/opt/homebrew/opt/postgresql@14/bin/uname"
+      - "/Users/mimimizuno/.rbenv/bin/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 24.6.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Program used to build from build.ninja files."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ninja-build"
+      - "ninja"
+      - "samu"
+    candidate_directories:
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/postgresql@16/bin/ninja-build"
+      - "/opt/homebrew/opt/postgresql@16/bin/ninja"
+      - "/opt/homebrew/opt/postgresql@16/bin/samu"
+      - "/Users/mimimizuno/.rbenv/shims/ninja-build"
+      - "/Users/mimimizuno/.rbenv/shims/ninja"
+      - "/Users/mimimizuno/.rbenv/shims/samu"
+      - "/opt/homebrew/opt/postgresql@14/bin/ninja-build"
+      - "/opt/homebrew/opt/postgresql@14/bin/ninja"
+      - "/opt/homebrew/opt/postgresql@14/bin/samu"
+      - "/Users/mimimizuno/.rbenv/bin/ninja-build"
+      - "/Users/mimimizuno/.rbenv/bin/ninja"
+      - "/Users/mimimizuno/.rbenv/bin/samu"
+      - "/opt/homebrew/bin/ninja-build"
+    found: "/opt/homebrew/bin/ninja"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/opt/llvm/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/4.2.0/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/opt/homebrew/opt/llvm/bin/clang++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 537 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/ar"
+      - "/opt/homebrew/opt/postgresql@16/bin/ar"
+      - "/Users/mimimizuno/.rbenv/shims/ar"
+      - "/opt/homebrew/opt/postgresql@14/bin/ar"
+      - "/Users/mimimizuno/.rbenv/bin/ar"
+      - "/opt/homebrew/bin/ar"
+      - "/opt/homebrew/sbin/ar"
+      - "/usr/local/bin/ar"
+      - "/System/Cryptexes/App/usr/bin/ar"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/strip"
+      - "/opt/homebrew/opt/postgresql@16/bin/strip"
+      - "/Users/mimimizuno/.rbenv/shims/strip"
+      - "/opt/homebrew/opt/postgresql@14/bin/strip"
+      - "/Users/mimimizuno/.rbenv/bin/strip"
+      - "/opt/homebrew/bin/strip"
+      - "/opt/homebrew/sbin/strip"
+      - "/usr/local/bin/strip"
+      - "/System/Cryptexes/App/usr/bin/strip"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/ld"
+      - "/opt/homebrew/opt/postgresql@16/bin/ld"
+      - "/Users/mimimizuno/.rbenv/shims/ld"
+      - "/opt/homebrew/opt/postgresql@14/bin/ld"
+      - "/Users/mimimizuno/.rbenv/bin/ld"
+      - "/opt/homebrew/bin/ld"
+      - "/opt/homebrew/sbin/ld"
+      - "/usr/local/bin/ld"
+      - "/System/Cryptexes/App/usr/bin/ld"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-nm"
+      - "nm"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-nm"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objdump"
+      - "objdump"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-objdump"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objcopy"
+      - "objcopy"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-readelf"
+      - "readelf"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-readelf"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-dlltool"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/tapi"
+      - "/opt/homebrew/opt/postgresql@16/bin/tapi"
+      - "/Users/mimimizuno/.rbenv/shims/tapi"
+      - "/opt/homebrew/opt/postgresql@14/bin/tapi"
+      - "/Users/mimimizuno/.rbenv/bin/tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "LLVM archiver"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ar-21.1"
+      - "llvm-ar-21"
+      - "llvm-ar21"
+      - "llvm-ar"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar-21.1"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar-21.1"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ar-21.1"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ar-21.1"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ar-21.1"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ar-21.1"
+      - "/opt/homebrew/bin/llvm-ar-21.1"
+      - "/opt/homebrew/sbin/llvm-ar-21.1"
+      - "/usr/local/bin/llvm-ar-21.1"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-21.1"
+      - "/usr/bin/llvm-ar-21.1"
+      - "/bin/llvm-ar-21.1"
+      - "/usr/sbin/llvm-ar-21.1"
+      - "/sbin/llvm-ar-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-21.1"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar-21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar-21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ar-21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ar-21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ar-21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ar-21"
+      - "/opt/homebrew/bin/llvm-ar-21"
+      - "/opt/homebrew/sbin/llvm-ar-21"
+      - "/usr/local/bin/llvm-ar-21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-21"
+      - "/usr/bin/llvm-ar-21"
+      - "/bin/llvm-ar-21"
+      - "/usr/sbin/llvm-ar-21"
+      - "/sbin/llvm-ar-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-21"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ar21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ar21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ar21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ar21"
+      - "/opt/homebrew/bin/llvm-ar21"
+      - "/opt/homebrew/sbin/llvm-ar21"
+      - "/usr/local/bin/llvm-ar21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar21"
+      - "/usr/bin/llvm-ar21"
+      - "/bin/llvm-ar21"
+      - "/usr/sbin/llvm-ar21"
+      - "/sbin/llvm-ar21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar21"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "Generate index for LLVM archive"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib-21.1"
+      - "llvm-ranlib-21"
+      - "llvm-ranlib21"
+      - "llvm-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ranlib-21.1"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ranlib-21.1"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ranlib-21.1"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/sbin/llvm-ranlib-21.1"
+      - "/usr/local/bin/llvm-ranlib-21.1"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-21.1"
+      - "/usr/bin/llvm-ranlib-21.1"
+      - "/bin/llvm-ranlib-21.1"
+      - "/usr/sbin/llvm-ranlib-21.1"
+      - "/sbin/llvm-ranlib-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib-21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib-21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ranlib-21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ranlib-21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ranlib-21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ranlib-21"
+      - "/opt/homebrew/bin/llvm-ranlib-21"
+      - "/opt/homebrew/sbin/llvm-ranlib-21"
+      - "/usr/local/bin/llvm-ranlib-21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-21"
+      - "/usr/bin/llvm-ranlib-21"
+      - "/bin/llvm-ranlib-21"
+      - "/usr/sbin/llvm-ranlib-21"
+      - "/sbin/llvm-ranlib-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-21"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ranlib21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ranlib21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ranlib21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ranlib21"
+      - "/opt/homebrew/bin/llvm-ranlib21"
+      - "/opt/homebrew/sbin/llvm-ranlib21"
+      - "/usr/local/bin/llvm-ranlib21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib21"
+      - "/usr/bin/llvm-ranlib21"
+      - "/bin/llvm-ranlib21"
+      - "/usr/sbin/llvm-ranlib21"
+      - "/sbin/llvm-ranlib21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib21"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-21.1"
+      - "clang-scan-deps-21"
+      - "clang-scan-deps21"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/opt/postgresql@16/bin/clang-scan-deps-21.1"
+      - "/Users/mimimizuno/.rbenv/shims/clang-scan-deps-21.1"
+      - "/opt/homebrew/opt/postgresql@14/bin/clang-scan-deps-21.1"
+      - "/Users/mimimizuno/.rbenv/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/sbin/clang-scan-deps-21.1"
+      - "/usr/local/bin/clang-scan-deps-21.1"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-21.1"
+      - "/usr/bin/clang-scan-deps-21.1"
+      - "/bin/clang-scan-deps-21.1"
+      - "/usr/sbin/clang-scan-deps-21.1"
+      - "/sbin/clang-scan-deps-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps-21"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps-21"
+      - "/opt/homebrew/opt/postgresql@16/bin/clang-scan-deps-21"
+      - "/Users/mimimizuno/.rbenv/shims/clang-scan-deps-21"
+      - "/opt/homebrew/opt/postgresql@14/bin/clang-scan-deps-21"
+      - "/Users/mimimizuno/.rbenv/bin/clang-scan-deps-21"
+      - "/opt/homebrew/bin/clang-scan-deps-21"
+      - "/opt/homebrew/sbin/clang-scan-deps-21"
+      - "/usr/local/bin/clang-scan-deps-21"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-21"
+      - "/usr/bin/clang-scan-deps-21"
+      - "/bin/clang-scan-deps-21"
+      - "/usr/sbin/clang-scan-deps-21"
+      - "/sbin/clang-scan-deps-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-21"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps21"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps21"
+      - "/opt/homebrew/opt/postgresql@16/bin/clang-scan-deps21"
+      - "/Users/mimimizuno/.rbenv/shims/clang-scan-deps21"
+      - "/opt/homebrew/opt/postgresql@14/bin/clang-scan-deps21"
+      - "/Users/mimimizuno/.rbenv/bin/clang-scan-deps21"
+      - "/opt/homebrew/bin/clang-scan-deps21"
+      - "/opt/homebrew/sbin/clang-scan-deps21"
+      - "/usr/local/bin/clang-scan-deps21"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps21"
+      - "/usr/bin/clang-scan-deps21"
+      - "/bin/clang-scan-deps21"
+      - "/usr/sbin/clang-scan-deps21"
+      - "/sbin/clang-scan-deps21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps21"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:76 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "install_name_tool"
+    candidate_directories:
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/postgresql@16/bin/install_name_tool"
+      - "/Users/mimimizuno/.rbenv/shims/install_name_tool"
+      - "/opt/homebrew/opt/postgresql@14/bin/install_name_tool"
+      - "/Users/mimimizuno/.rbenv/bin/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK"
+      binary: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_061be
+        [1/2] /opt/homebrew/opt/llvm/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Homebrew clang version 21.1.6
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/mimimizuno/.config/clang
+        clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-21" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK -resource-dir /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21 -dependency-file CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -internal-isystem /opt/homebrew/Cellar/llvm/21.1.6/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target arm64-apple-darwin24.6.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/llvm/21.1.6/bin/../include/c++/v1
+         /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /opt/homebrew/opt/llvm/bin/clang++ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_061be   && :
+        Homebrew clang version 21.1.6
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/mimimizuno/.config/clang
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_061be -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1167.5
+        BUILD 01:45:05 Apr 30 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.1.6 (static support for 29, runtime is 30)
+        TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+        Library search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/llvm/21.1.6/bin/../include/c++/v1]
+          add: [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/llvm/21.1.6/bin/../include/c++/v1] ==> [/opt/homebrew/Cellar/llvm/21.1.6/include/c++/v1]
+        collapse include dir [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include] ==> [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Cellar/llvm/21.1.6/include/c++/v1;/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_061be]
+        ignore line: [[1/2] /opt/homebrew/opt/llvm/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Homebrew clang version 21.1.6]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/mimimizuno/.config/clang]
+        ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-21" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-CsnOjK -resource-dir /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21 -dependency-file CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -internal-isystem /opt/homebrew/Cellar/llvm/21.1.6/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target arm64-apple-darwin24.6.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/llvm/21.1.6/bin/../include/c++/v1]
+        ignore line: [ /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /opt/homebrew/opt/llvm/bin/clang++ -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_061be   && :]
+        ignore line: [Homebrew clang version 21.1.6]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/mimimizuno/.config/clang]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_061be -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_061be] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_061be.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /usr/bin/ld
+        Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1167.5
+      BUILD 01:45:05 Apr 30 2025
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:47 (find_package)"
+    name: "OpenCV"
+    configs:
+      -
+        filename: "OpenCVConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "opencv-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "OpenCV"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/opt/homebrew/opt/opencv/lib/cmake/opencv4/OpenCVConfig.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/lib/cmake/opencv4/opencv-config.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/pkgRedirects/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/postgresql@16/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/postgresql@16/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/mimimizuno/.rbenv/shims/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/mimimizuno/.rbenv/shims/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/postgresql@14/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/postgresql@14/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/mimimizuno/.rbenv/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/mimimizuno/.rbenv/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/Library/Frameworks/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/Library/Frameworks/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Frameworks/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Frameworks/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/opt/llvm/bin/clang 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/4.2.0/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting C compiler apple sysroot: "/opt/homebrew/opt/llvm/bin/clang" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 469 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "LLVM archiver"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ar-21.1"
+      - "llvm-ar-21"
+      - "llvm-ar21"
+      - "llvm-ar"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar-21.1"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar-21.1"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ar-21.1"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ar-21.1"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ar-21.1"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ar-21.1"
+      - "/opt/homebrew/bin/llvm-ar-21.1"
+      - "/opt/homebrew/sbin/llvm-ar-21.1"
+      - "/usr/local/bin/llvm-ar-21.1"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-21.1"
+      - "/usr/bin/llvm-ar-21.1"
+      - "/bin/llvm-ar-21.1"
+      - "/usr/sbin/llvm-ar-21.1"
+      - "/sbin/llvm-ar-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-21.1"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar-21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar-21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ar-21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ar-21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ar-21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ar-21"
+      - "/opt/homebrew/bin/llvm-ar-21"
+      - "/opt/homebrew/sbin/llvm-ar-21"
+      - "/usr/local/bin/llvm-ar-21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-21"
+      - "/usr/bin/llvm-ar-21"
+      - "/bin/llvm-ar-21"
+      - "/usr/sbin/llvm-ar-21"
+      - "/sbin/llvm-ar-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-21"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ar21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ar21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ar21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ar21"
+      - "/opt/homebrew/bin/llvm-ar21"
+      - "/opt/homebrew/sbin/llvm-ar21"
+      - "/usr/local/bin/llvm-ar21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar21"
+      - "/usr/bin/llvm-ar21"
+      - "/bin/llvm-ar21"
+      - "/usr/sbin/llvm-ar21"
+      - "/sbin/llvm-ar21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar21"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "Generate index for LLVM archive"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib-21.1"
+      - "llvm-ranlib-21"
+      - "llvm-ranlib21"
+      - "llvm-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ranlib-21.1"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ranlib-21.1"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ranlib-21.1"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/sbin/llvm-ranlib-21.1"
+      - "/usr/local/bin/llvm-ranlib-21.1"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-21.1"
+      - "/usr/bin/llvm-ranlib-21.1"
+      - "/bin/llvm-ranlib-21.1"
+      - "/usr/sbin/llvm-ranlib-21.1"
+      - "/sbin/llvm-ranlib-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-21.1"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib-21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib-21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ranlib-21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ranlib-21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ranlib-21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ranlib-21"
+      - "/opt/homebrew/bin/llvm-ranlib-21"
+      - "/opt/homebrew/sbin/llvm-ranlib-21"
+      - "/usr/local/bin/llvm-ranlib-21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-21"
+      - "/usr/bin/llvm-ranlib-21"
+      - "/bin/llvm-ranlib-21"
+      - "/usr/sbin/llvm-ranlib-21"
+      - "/sbin/llvm-ranlib-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-21"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib21"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib21"
+      - "/opt/homebrew/opt/postgresql@16/bin/llvm-ranlib21"
+      - "/Users/mimimizuno/.rbenv/shims/llvm-ranlib21"
+      - "/opt/homebrew/opt/postgresql@14/bin/llvm-ranlib21"
+      - "/Users/mimimizuno/.rbenv/bin/llvm-ranlib21"
+      - "/opt/homebrew/bin/llvm-ranlib21"
+      - "/opt/homebrew/sbin/llvm-ranlib21"
+      - "/usr/local/bin/llvm-ranlib21"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib21"
+      - "/usr/bin/llvm-ranlib21"
+      - "/bin/llvm-ranlib21"
+      - "/usr/sbin/llvm-ranlib21"
+      - "/sbin/llvm-ranlib21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib21"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/bin/llvm-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-21.1"
+      - "clang-scan-deps-21"
+      - "clang-scan-deps21"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/Users/mimimizuno/.rbenv/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/opt/postgresql@16/bin/clang-scan-deps-21.1"
+      - "/Users/mimimizuno/.rbenv/shims/clang-scan-deps-21.1"
+      - "/opt/homebrew/opt/postgresql@14/bin/clang-scan-deps-21.1"
+      - "/Users/mimimizuno/.rbenv/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/sbin/clang-scan-deps-21.1"
+      - "/usr/local/bin/clang-scan-deps-21.1"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-21.1"
+      - "/usr/bin/clang-scan-deps-21.1"
+      - "/bin/clang-scan-deps-21.1"
+      - "/usr/sbin/clang-scan-deps-21.1"
+      - "/sbin/clang-scan-deps-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-21.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-21.1"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps-21"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps-21"
+      - "/opt/homebrew/opt/postgresql@16/bin/clang-scan-deps-21"
+      - "/Users/mimimizuno/.rbenv/shims/clang-scan-deps-21"
+      - "/opt/homebrew/opt/postgresql@14/bin/clang-scan-deps-21"
+      - "/Users/mimimizuno/.rbenv/bin/clang-scan-deps-21"
+      - "/opt/homebrew/bin/clang-scan-deps-21"
+      - "/opt/homebrew/sbin/clang-scan-deps-21"
+      - "/usr/local/bin/clang-scan-deps-21"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-21"
+      - "/usr/bin/clang-scan-deps-21"
+      - "/bin/clang-scan-deps-21"
+      - "/usr/sbin/clang-scan-deps-21"
+      - "/sbin/clang-scan-deps-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-21"
+      - "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps21"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps21"
+      - "/opt/homebrew/opt/postgresql@16/bin/clang-scan-deps21"
+      - "/Users/mimimizuno/.rbenv/shims/clang-scan-deps21"
+      - "/opt/homebrew/opt/postgresql@14/bin/clang-scan-deps21"
+      - "/Users/mimimizuno/.rbenv/bin/clang-scan-deps21"
+      - "/opt/homebrew/bin/clang-scan-deps21"
+      - "/opt/homebrew/sbin/clang-scan-deps21"
+      - "/usr/local/bin/clang-scan-deps21"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps21"
+      - "/usr/bin/clang-scan-deps21"
+      - "/bin/clang-scan-deps21"
+      - "/usr/sbin/clang-scan-deps21"
+      - "/sbin/clang-scan-deps21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps21"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps21"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9"
+      binary: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_8939e
+        [1/2] /opt/homebrew/opt/llvm/bin/clang   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Homebrew clang version 21.1.6
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/mimimizuno/.config/clang
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-21" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9 -resource-dir /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21 -dependency-file CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target arm64-apple-darwin24.6.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /opt/homebrew/opt/llvm/bin/clang -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -o cmTC_8939e   && :
+        Homebrew clang version 21.1.6
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/mimimizuno/.config/clang
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_8939e -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1167.5
+        BUILD 01:45:05 Apr 30 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.1.6 (static support for 29, runtime is 30)
+        TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+        Library search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include] ==> [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_8939e]
+        ignore line: [[1/2] /opt/homebrew/opt/llvm/bin/clang   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Homebrew clang version 21.1.6]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/mimimizuno/.config/clang]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-21" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-S21Lw9 -resource-dir /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21 -dependency-file CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target arm64-apple-darwin24.6.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /opt/homebrew/opt/llvm/bin/clang -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -o cmTC_8939e   && :]
+        ignore line: [Homebrew clang version 21.1.6]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/mimimizuno/.config/clang]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_8939e -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_8939e] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_8939e.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'C': /usr/bin/ld
+        Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1167.5
+      BUILD 01:45:05 Apr 30 2025
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:333 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:22 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-GoM6ro"
+      binary: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-GoM6ro"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_fopenmplibomp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-GoM6ro'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_cba4b
+        [1/2] /opt/homebrew/opt/llvm/bin/clang   -fopenmp=libomp -arch arm64 -MD -MT CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -c /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-GoM6ro/OpenMPTryFlag.c
+        [2/2] : && /opt/homebrew/opt/llvm/bin/clang -fopenmp=libomp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -o cmTC_cba4b   && :
+        Homebrew clang version 21.1.6
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/mimimizuno/.config/clang
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_cba4b -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -lomp -L/opt/homebrew/Cellar/llvm/21.1.6/lib -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1167.5
+        BUILD 01:45:05 Apr 30 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.1.6 (static support for 29, runtime is 30)
+        TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+        Library search paths:
+        	/opt/homebrew/Cellar/llvm/21.1.6/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:377 (message)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:22 (find_package)"
+    message: |
+      Parsed C OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-GoM6ro']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_cba4b]
+        ignore line: [[1/2] /opt/homebrew/opt/llvm/bin/clang   -fopenmp=libomp -arch arm64 -MD -MT CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -c /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-GoM6ro/OpenMPTryFlag.c]
+        ignore line: [[2/2] : && /opt/homebrew/opt/llvm/bin/clang -fopenmp=libomp -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -o cmTC_cba4b   && :]
+        ignore line: [Homebrew clang version 21.1.6]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/mimimizuno/.config/clang]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_cba4b -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o -lomp -L/opt/homebrew/Cellar/llvm/21.1.6/lib -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_cba4b] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_cba4b.dir/OpenMPTryFlag.c.o] ==> ignore
+          arg [-lomp] ==> lib [omp]
+          arg [-L/opt/homebrew/Cellar/llvm/21.1.6/lib] ==> dir [/opt/homebrew/Cellar/llvm/21.1.6/lib]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        Library search paths: [;/opt/homebrew/Cellar/llvm/21.1.6/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/Cellar/llvm/21.1.6/lib] ==> [/opt/homebrew/Cellar/llvm/21.1.6/lib]
+        collapse library dir [/opt/homebrew/Cellar/llvm/21.1.6/lib] ==> [/opt/homebrew/Cellar/llvm/21.1.6/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        implicit libs: [omp]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/llvm/21.1.6/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:395 (find_library)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:22 (find_package)"
+    mode: "library"
+    variable: "OpenMP_omp_LIBRARY"
+    description: "Path to the omp library for OpenMP"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "omp"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/21.1.6/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift/"
+      - "/opt/homebrew/opt/postgresql@16/bin/"
+      - "/Users/mimimizuno/.rbenv/shims/"
+      - "/opt/homebrew/opt/postgresql@14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    found: "/opt/homebrew/Cellar/llvm/21.1.6/lib/libomp.dylib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/homebrew/opt/postgresql@16/bin"
+        - "/Users/mimimizuno/.rbenv/shims"
+        - "/opt/homebrew/opt/postgresql@14/bin"
+        - "/Users/mimimizuno/.rbenv/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:333 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:22 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-OgIZHk"
+      binary: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-OgIZHk"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_fopenmplibomp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-OgIZHk'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_962b9
+        [1/2] /opt/homebrew/opt/llvm/bin/clang++   -fopenmp=libomp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -c /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-OgIZHk/OpenMPTryFlag.cpp
+        [2/2] : && /opt/homebrew/opt/llvm/bin/clang++ -fopenmp=libomp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -o cmTC_962b9   && :
+        Homebrew clang version 21.1.6
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/mimimizuno/.config/clang
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_962b9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -lomp -L/opt/homebrew/Cellar/llvm/21.1.6/lib -lc++ -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1167.5
+        BUILD 01:45:05 Apr 30 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.1.6 (static support for 29, runtime is 30)
+        TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+        Library search paths:
+        	/opt/homebrew/Cellar/llvm/21.1.6/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:377 (message)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:22 (find_package)"
+    message: |
+      Parsed CXX OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-OgIZHk']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_962b9]
+        ignore line: [[1/2] /opt/homebrew/opt/llvm/bin/clang++   -fopenmp=libomp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -c /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-OgIZHk/OpenMPTryFlag.cpp]
+        ignore line: [[2/2] : && /opt/homebrew/opt/llvm/bin/clang++ -fopenmp=libomp -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -o cmTC_962b9   && :]
+        ignore line: [Homebrew clang version 21.1.6]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.6/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/mimimizuno/.config/clang]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_962b9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o -lomp -L/opt/homebrew/Cellar/llvm/21.1.6/lib -lc++ -lSystem /opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_962b9] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_962b9.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [-lomp] ==> lib [omp]
+          arg [-L/opt/homebrew/Cellar/llvm/21.1.6/lib] ==> dir [/opt/homebrew/Cellar/llvm/21.1.6/lib]
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        Library search paths: [;/opt/homebrew/Cellar/llvm/21.1.6/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/opt/homebrew/Cellar/llvm/21.1.6/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/Cellar/llvm/21.1.6/lib] ==> [/opt/homebrew/Cellar/llvm/21.1.6/lib]
+        collapse library dir [/opt/homebrew/Cellar/llvm/21.1.6/lib] ==> [/opt/homebrew/Cellar/llvm/21.1.6/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        implicit libs: [omp;c++]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/llvm/21.1.6/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:574 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:714 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:22 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-MnIEGC"
+      binary: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-MnIEGC"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-MnIEGC'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_8623f
+        [1/2] /opt/homebrew/opt/llvm/bin/clang   -fopenmp=libomp -arch arm64 -MD -MT CMakeFiles/cmTC_8623f.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_8623f.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_8623f.dir/OpenMPCheckVersion.c.o -c /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-MnIEGC/OpenMPCheckVersion.c
+        [2/2] : && /opt/homebrew/opt/llvm/bin/clang -fopenmp=libomp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8623f.dir/OpenMPCheckVersion.c.o -o cmTC_8623f   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:574 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:714 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:22 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-tKVkLd"
+      binary: "/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-tKVkLd"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/21.1.6/bin/clang-scan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-tKVkLd'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_c6ea5
+        [1/2] /opt/homebrew/opt/llvm/bin/clang++   -fopenmp=libomp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_c6ea5.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_c6ea5.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_c6ea5.dir/OpenMPCheckVersion.cpp.o -c /Users/mimimizuno/github/oyl-utils/build/CMakeFiles/CMakeScratch/TryCompile-tKVkLd/OpenMPCheckVersion.cpp
+        [2/2] : && /opt/homebrew/opt/llvm/bin/clang++ -fopenmp=libomp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c6ea5.dir/OpenMPCheckVersion.cpp.o -o cmTC_c6ea5   && :
+        
+      exitCode: 0
+...
