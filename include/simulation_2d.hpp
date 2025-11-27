@@ -227,7 +227,7 @@ void Simulation2D<Element>::outputSelecteddE()
 template <typename Element>
 void Simulation2D<Element>::outputSelectedAllData()
 {
-    for (auto& [ofsPtr, elemPtrs] : selecteddEElements)
+    for (auto& [ofsPtr, elemPtrs] : selectedAllDataElements)
     {
         if (!ofsPtr || !(*ofsPtr)) continue;
 
@@ -284,8 +284,8 @@ void Simulation2D<Element>::outputSelectedAllData()
             << "," << dE_down;
 
         // --- wt(up/down) ---
-        double wt_up   = elemPtr->getwt().count("up")   ? elemPtr->getwt().at("up")   : NAN;
-        double wt_down = elemPtr->getwt().count("down") ? elemPtr->getwt().at("down") : NAN;
+        double wt_up   = elemPtr->getWT().count("up")   ? elemPtr->getWT().at("up")   : NAN;
+        double wt_down = elemPtr->getWT().count("down") ? elemPtr->getWT().at("down") : NAN;
 
         (*ofsPtr)
             << "," << wt_up

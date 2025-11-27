@@ -254,6 +254,24 @@ public:
         return ows[index];
     }
 
+        // Qの取得
+    double getQ() const override { return ows[0]->getQ(); };
+
+    // Rゲッター
+    double getR() const override { return ows[0]->getR(); };
+    
+    // Rjゲッター
+    double getRj() const override { return ows[0]->getRj(); };
+    
+    // Cjゲッター
+    double getCj() const override { return ows[0]->getCj(); };
+    
+    // Cゲッター
+    double getC() const override { return ows[0]->getC(); };
+    
+    // legsゲッター
+    int getlegs() const override { return ows[0]->getlegs(); };
+
 };
 
 #endif // ONEWAY_UNIT6_HPP

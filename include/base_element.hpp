@@ -35,8 +35,6 @@ public:
     virtual double getCj() const = 0;
     // Cゲッター
     virtual double getC() const = 0;
-    // Vdゲッター
-    virtual double getVd() const = 0;
     // legsゲッター
     virtual int getlegs() const = 0;
 
