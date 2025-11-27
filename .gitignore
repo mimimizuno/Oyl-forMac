@@ -2,5 +2,6 @@
 *.exe
 *.txt
 /output
+/data
 # CMakeListsだけは追跡するように設定
 !CMakeLists.txt

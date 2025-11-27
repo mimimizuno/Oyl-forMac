@@ -32,8 +32,11 @@ private:
     // std::vector<std::pair<std::ofstream*, std::shared_ptr<Element>>> selectedElements;
     // 複数素子を1つのファイルに出力するための構造
     std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selectedElements;
+<<<<<<< HEAD
     // dE出力対象
     std::vector<std::pair<std::shared_ptr<std::ofstream>, std::vector<std::shared_ptr<Element>>>> selecteddEElements;
+=======
+>>>>>>> dc1c858 (Update parallel and tunnel logs)
     // トンネル情報を追跡する素子のベクトル
     std::vector<std::shared_ptr<Element>> trackedElements;
     // トンネルした素子を記録するための変数
