@@ -25,6 +25,20 @@ public:
     // oneway用の中要素を取り出すメソッド（seoやmultiseoで呼び出すとエラーが発生する）
     virtual std::shared_ptr<BaseElement> getInternalElement(int index) const = 0;
     virtual std::map<std::string, double> getdE() const = 0;
+    // Qの取得
+    virtual double getQ() const = 0;
+    // Rゲッター
+    virtual double getR() const = 0;
+    // Rjゲッター
+    virtual double getRj() const = 0;
+    // Cjゲッター
+    virtual double getCj() const = 0;
+    // Cゲッター
+    virtual double getC() const = 0;
+    // Vdゲッター
+    virtual double getVd() const = 0;
+    // legsゲッター
+    virtual int getlegs() const = 0;
 
     // --- 状態設定 ---
     virtual void setVias(const double Vd) = 0;
