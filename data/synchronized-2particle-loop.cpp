@@ -36,7 +36,7 @@ double cj_leg3 = seo_junction_cj_calc(leg3, C, setVth);
 double cj_leg4 = seo_junction_cj_calc(leg4, C, setVth);
 double cj_leg5 = seo_junction_cj_calc(leg5, C, setVth);
 double cj_leg6 = seo_junction_cj_calc(leg6, C, setVth);
-constexpr int repeat_count = 100;
+constexpr int repeat_count = 1;
 constexpr int junction_num_max = 5;
 constexpr double max_pulse_voltage = 0;
 
@@ -384,7 +384,6 @@ int main()
                 for (int x = 0; x < detection_down.numCols(); ++x) {
                     for (int interval = 10; interval < endtime; interval += 10){
                         sim.addVoltageTrigger(interval, &detection_down, y, x, -0.0025, 1);
-                        // sim.addVoltageTrigger(interval, &detection_down, y, x, 0, 1);
                     }
                 }
             }
@@ -446,10 +445,6 @@ int main()
             //     command_leftB.getElement(6,8)
             // };
 
-            // auto ofs1 = std::make_shared<std::ofstream>("output/new_structure_commD.txt");
-            // sim.addSelectedElements(ofs1, tracked_command_down);
-            // sim.generateGnuplotScript("output/new_structure_commD.txt", {"3-6A","5-8A","5-8B","6-8A","6-8B","8-12A","8-12B","9-12A","9-12B"});
-
             auto ofs2 = std::make_shared<std::ofstream>("output/new_structure_detec"+ std::to_string(trial) +".txt");
             sim.addSelectedElements(ofs2, tracked_detec);
             sim.generateGnuplotScript("output/new_structure_detec"+ std::to_string(trial) +".txt", {"2-6","3-6","5-8","6-8","8-12","9-12"});
@@ -462,9 +457,12 @@ int main()
             // sim.addSelectedElements(ofs4, tracked_oneway);
             // sim.generateGnuplotScript("output/new_structure_oneway.txt", {"0A","6A","0B","6B","detec","0A","1A","2A","3A","4A","5A","6A","0B","1B","2B","3B","4B","5B","6B","LA","LB"});
 
-            // dE追跡用
-            // auto ofsdE = std::make_shared<std::ofstream>("output/dEcheccker.csv");
-            // sim.addSelecteddEElements(ofsdE, {oneway_DtoC_downtoleftA.getElement(6,8)->getInternalElement(0),oneway_DtoC_downtoleftB.getElement(6,8)->getInternalElement(0)});
+            // 素子データ全追跡
+            std::vector<std::shared_ptr<BaseElement>> track = {
+                command_downA.getElement(1,6),
+            };
+            auto ofsAllData = std::make_shared<std::ofstream>("output/commandDown1-6All.csv");
+            sim.addSelectedAllDataElements(ofsAllData,track);
             // // 時刻記録
             sim.run();
             allResults.push_back(sim.getTunnelTimes());

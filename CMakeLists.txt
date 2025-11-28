@@ -36,6 +36,7 @@ target_compile_features(oyl-utils PUBLIC cxx_std_20)
 target_link_libraries(oyl-utils PUBLIC OpenMP::OpenMP_CXX)
 
 # メイン実行ファイル
+# add_executable(MainApp data/synchronized-2particle-loop.cpp)
 add_executable(MainApp main.cpp)
 # サンプルを実行したい場合は下のように記述。↑のmain.cppはコメントアウト
 # add_executable(MainApp sample/parameter_calc.cpp)
